@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+html,
+body {
+  height: 100%;
+  background: #fcedda;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+svg {
+  fill: none;
+  width: 500px;
+  stroke-width: 80px;
+}
+path {
+  stroke-dasharray: var(--length);
+  stroke-dashoffset: var(--length);
+}
+.main-bg > path {
+  stroke: #fff;
+  animation: path var(--duration) ease forwards;
+  animation-delay: 7s;
+}
+.main > path {
+  stroke: rgb(196, 1, 1);
+  animation: path var(--duration) ease-in forwards;
+  animation-delay: 7s;
+}
+.main-bg > .cir {
+  animation: path 2.5s forwards;
+  animation-delay: 9s;
+}
+.main > .cir {
+  animation: path 2s forwards;
+  animation-delay: 9.5s;
+}
+
+@keyframes path {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <style>
+      :root {
+        --ti-cursor-margin-left: 0.2em;
+        --ti-cursor-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Joo Jea project 입니다.</h1>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        new TypeIt("#title")
+          .pause(1000)
+          .delete(4, { delay: 1000 })
+          .type("준비중입니다.")
+          .go();
+      });
+    </script>
+  </body>
+</html>

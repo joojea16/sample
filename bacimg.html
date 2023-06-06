@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background: #c30;
+      }
+      .cont {
+        position: relative;
+        top: 100px;
+        width: 800px;
+        height: 700px;
+        margin: 0 auto;
+        background: url(img/home.png);
+        background-size: cover;
+        perspective: 480px;
+      }
+
+      .door {
+        position: absolute;
+        overflow: hidden;
+        /* background: #ccc; */
+        top: 44%;
+        left: 46%;
+        width: 235px;
+        height: 334px;
+        transform: rotate(45deg);
+        transform-origin: right;
+        animation: open 2s ease-in-out infinite alternate;
+      }
+      .door img {
+        width: 100%;
+      }
+      @keyframes open {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(120deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div class="door"><img src="img/door.png" alt="" /></div>
+    </div>
+  </body>
+</html>

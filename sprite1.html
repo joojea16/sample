@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(520px / 8);
+        height: 50px;
+        background: url(../img/as.png);
+        animation: animate 0.6s steps(8) infinite;
+      }
+      .box2 {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transform: translate(-20%, -20%);
+        width: calc(1350px / 10);
+        height: 150px;
+        background: url(../img/c.png);
+        animation: animate 4s steps(10) infinite;
+      }
+      @keyframes animate {
+        from {
+          background-position: 0;
+        }
+        to {
+          background-position: 520px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box2"></div>
+  </body>
+</html>
